@@ -1,0 +1,31 @@
+/* Sulvo legal pages. Single light "paper" theme from docs/design/TOKENS.md
+   (paper, paper-raised, paper-shade, ink, ink-muted, contour, primary, on-primary).
+   Fonts: Source Serif 4 for headings and Noto Sans for text are used when installed; nothing is downloaded. */
+:root { --bg:#DAC896; --fg:#2B2113; --muted:#4F4128; --accent:#1F4468; --accent2:#2B2113; --card:#E5D6A2; --line:#7A5A34; --rule:#CBB886;
+  --focus:#2B2113; --pill:#1F4468; --pillfg:#F7F0DA; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.7 "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Thai", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", Helvetica, Arial, sans-serif; }
+main { max-width: 780px; margin: 0 auto; padding: 36px 16px 64px; }
+header { margin-bottom: 24px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; font-weight: 700;
+  font-family: "Source Serif 4", "Source Serif Pro", Georgia, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Thai", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", serif; }
+h2 { font-size: 20px; line-height: 1.35; margin: 32px 0 8px; color: var(--accent2); border-bottom: 2px solid var(--rule); padding-bottom: 4px; font-weight: 650;
+  font-family: "Source Serif 4", "Source Serif Pro", Georgia, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Thai", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", serif; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+.muted { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 24px 22px; box-shadow: 0 2px 6px rgba(43,33,19,.16); }
+ul { padding-inline-start: 22px; }
+li { margin: 4px 0; }
+.langs { display: flex; flex-wrap: wrap; gap: 6px; }
+.langs a { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); text-decoration: none; font-size: 14px; font-weight: 600; min-height: 32px; color: var(--fg); }
+.langs a[aria-current] { background: var(--pill); border-color: var(--pill); color: var(--pillfg); }
+.skip { position: absolute; inset-inline-start: -9999px; }
+.skip:focus { inset-inline-start: 8px; top: 8px; background: var(--card); padding: 6px 10px; z-index: 5; }
+.chooser { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
+.chooser li { break-inside: avoid; }
+@media (max-width: 480px) { h1 { font-size: 24px; } .card { padding: 18px 16px; } .chooser { columns: 1; } }
